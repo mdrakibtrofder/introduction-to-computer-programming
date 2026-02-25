@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate speed (distance / time) based on user input.
+**/
 #include <stdio.h>
 
 int main() {

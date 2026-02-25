@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate the average marks of three subjects based on user input.
+**/
 #include <stdio.h>
 
 int main() {

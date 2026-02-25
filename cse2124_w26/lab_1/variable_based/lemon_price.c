@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate the price increase of lemons using variables.
+**/
 #include <stdio.h>
 
 int main() {

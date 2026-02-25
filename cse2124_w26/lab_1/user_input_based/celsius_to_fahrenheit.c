@@ -1,3 +1,6 @@
+/**
+Write a C program to convert temperature from Celsius to Fahrenheit based on user input.
+**/
 #include <stdio.h>
 
 int main() {

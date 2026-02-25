@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate speed (distance / time) using variables.
+**/
 #include <stdio.h>
 
 int main() {

@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate total salary (basic + bonus) using variables.
+**/
 #include <stdio.h>
 
 int main() {

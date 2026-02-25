@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate the price difference of lemons based on user input.
+**/
 #include <stdio.h>
 
 int main() {

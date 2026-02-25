@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate the distance between two points (x1, y1) and (x2, y2).
+**/
 #include <stdio.h>
 #include <math.h>
 

@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate gross salary based on basic salary, HRA (20%), and DA (50%).
+**/
 #include <stdio.h>
 
 int main() {

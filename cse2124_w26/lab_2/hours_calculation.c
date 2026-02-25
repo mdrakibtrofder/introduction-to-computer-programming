@@ -1,3 +1,6 @@
+/**
+Write a C program to calculate total study hours given total days, number of Fridays, and number of holidays. Assume weekdays are 8 hours and weekend/holidays are 4 hours.
+**/
 #include <stdio.h>
 
 int main() {
