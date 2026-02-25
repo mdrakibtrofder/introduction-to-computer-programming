@@ -1,3 +1,6 @@
+/**
+Write a C program to check whether a student passed or failed (pass mark 50)
+**/
 #include <stdio.h>
 
 int main() {

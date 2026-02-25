@@ -1,3 +1,6 @@
+/**
+Write a C program to perform basic arithmetic operations using switch case (Simple Calculator)
+**/
 #include <stdio.h>
 
 int main() {

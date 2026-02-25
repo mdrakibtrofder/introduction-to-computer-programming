@@ -1,3 +1,6 @@
+/**
+Write a C program to check whether a number is even
+**/
 #include <stdio.h>
 
 int main() {

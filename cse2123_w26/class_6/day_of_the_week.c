@@ -1,3 +1,6 @@
+/**
+Write a C program to print the day of the week using switch case
+**/
 #include <stdio.h>
 
 int main() {

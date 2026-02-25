@@ -1,3 +1,6 @@
+/**
+Write a C program to determine the grade based on marks
+**/
 #include <stdio.h>
 
 int main() {
