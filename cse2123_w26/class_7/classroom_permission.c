@@ -1,24 +1,23 @@
 /*
  * Problem Statement:
  * Write a C program to check if a user has permission to update a Google Classroom name.
- * Permission Rule:
- * - Only users with the role 'teacher' or 'super admin' can update the classroom name.
- * - Other users are not allowed to make updates.
+ * A person can update the name if they are either a Teacher or a Super Admin.
+ * 
+ * In this scenario:
+ * - is_teacher is initialized to true.
+ * - is_super_admin is initialized to false.
  */
 
 #include <stdio.h>
-#include <string.h>
+#include <stdbool.h>
 
 int main() {
-    char role[50];
+    // Initializing boolean variables
+    bool is_teacher = true;
+    bool is_super_admin = false;
 
-    printf("Enter your role: ");
-    // Using scanf with string to get the role. Note: this doesn't handle spaces well, 
-    // but roles like 'teacher' or 'superadmin' are usually single words.
-    scanf("%s", role);
-
-    // Check for permissions
-    if (strcmp(role, "teacher") == 0 || strcmp(role, "superadmin") == 0) {
+    // Check if either condition is true
+    if (is_teacher || is_super_admin) {
         printf("Access Granted: You can update the classroom name.\n");
     } else {
         printf("Access Denied: You do not have permission to update the classroom name.\n");
