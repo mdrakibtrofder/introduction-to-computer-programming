@@ -11,11 +11,11 @@
 #include <stdio.h>
 
 int main() {
-    float attendance;
+    double attendance;
     int feesPaid;
 
     printf("Enter attendance percentage: ");
-    scanf("%f", &attendance);
+    scanf("%lf", &attendance);
 
     printf("Have you paid the fees? (1 for Yes, 0 for No): ");
     scanf("%d", &feesPaid);
