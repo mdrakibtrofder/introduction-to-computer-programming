@@ -52,6 +52,8 @@ const ChapterLayout = ({ title, description, weekNumber, slug, slides, prevChapt
           ))}
         </div>
 
+        {problems.length > 0 && <CodingProblems problems={problems} />}
+
         {/* Navigation */}
         <div className="flex items-center justify-between mt-12 pt-8 border-t border-border">
           {prevChapter ? (
