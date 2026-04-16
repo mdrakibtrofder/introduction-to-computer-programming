@@ -17,6 +17,7 @@ const ChapterPage = () => {
       title={chapter.title}
       description={chapter.description}
       weekNumber={chapter.week}
+      slug={chapter.slug}
       slides={chapter.slides}
       prevChapter={prev ? { slug: prev.slug, title: prev.title } : undefined}
       nextChapter={next ? { slug: next.slug, title: next.title } : undefined}
