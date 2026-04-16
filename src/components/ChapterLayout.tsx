@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, Clock } from "lucide-react";
 import SlideCard, { type SlideContent } from "./SlideCard";
+import CodingProblems from "./CodingProblems";
+import { chapterProblems } from "../data/codingProblems";
 
 interface ChapterLayoutProps {
   title: string;
   description: string;
   weekNumber: number;
+  slug: string;
   slides: SlideContent[];
   prevChapter?: { slug: string; title: string };
   nextChapter?: { slug: string; title: string };
 }
 
-const ChapterLayout = ({ title, description, weekNumber, slides, prevChapter, nextChapter }: ChapterLayoutProps) => {
+const ChapterLayout = ({ title, description, weekNumber, slug, slides, prevChapter, nextChapter }: ChapterLayoutProps) => {
+  const problems = chapterProblems[slug] || [];
   return (
     <div className="min-h-screen">
       {/* Header */}
