@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import SlideCard, { type SlideContent } from "./SlideCard";
 import CodingProblems from "./CodingProblems";
 import { chapterProblems } from "../data/codingProblems";
@@ -29,10 +29,6 @@ const ChapterLayout = ({ title, description, weekNumber, slug, slides, prevChapt
           <div className="flex items-center gap-3 mb-3">
             <span className="px-2.5 py-1 rounded-md bg-primary/10 border border-primary/30 text-xs font-medium text-primary">
               Week {weekNumber}
-            </span>
-            <span className="flex items-center gap-1 text-xs text-muted-foreground">
-              <BookOpen className="w-3.5 h-3.5" />
-              {slides.length} slides
             </span>
             <span className="flex items-center gap-1 text-xs text-muted-foreground">
               <Clock className="w-3.5 h-3.5" />

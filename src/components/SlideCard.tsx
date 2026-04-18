@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import CodeBlock from "./CodeBlock";
+import { getSlideIcon } from "../lib/iconMap";
 
 export interface SlideContent {
   title: string;
@@ -18,8 +19,9 @@ interface SlideCardProps {
   totalSlides: number;
 }
 
-const SlideCard = ({ slide, index, totalSlides }: SlideCardProps) => {
+const SlideCard = ({ slide, index }: SlideCardProps) => {
   const [expanded, setExpanded] = useState(true);
+  const SlideIcon = getSlideIcon(index);
 
   return (
     <div className="glass-card overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -28,8 +30,8 @@ const SlideCard = ({ slide, index, totalSlides }: SlideCardProps) => {
         className="w-full flex items-center justify-between p-5 text-left hover:bg-secondary/30 transition-colors"
       >
         <div className="flex items-center gap-3">
-          <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-xs font-mono text-primary">
-            {index + 1}
+          <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
+            <SlideIcon className="w-4.5 h-4.5" style={{ width: 18, height: 18 }} />
           </span>
           <div>
             <h3 className="text-base font-semibold text-foreground">{slide.title}</h3>
@@ -37,7 +39,6 @@ const SlideCard = ({ slide, index, totalSlides }: SlideCardProps) => {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-muted-foreground hidden sm:block">{index + 1}/{totalSlides}</span>
           {expanded ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
         </div>
       </button>
