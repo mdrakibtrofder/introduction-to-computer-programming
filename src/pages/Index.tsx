@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Code, Zap, ArrowRight, Terminal, GraduationCap, Target, Layers } from "lucide-react";
+import { Code, ArrowRight, GraduationCap, Target, Layers } from "lucide-react";
 import { chapters } from "../data/chapters";
+import { getChapterIcon } from "../lib/iconMap";
 
 const Index = () => {
   return (
@@ -8,12 +9,8 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden rounded-2xl mx-4 sm:mx-6 mt-4" style={{ background: "var(--gradient-hero)" }}>
         <div className="relative z-10 px-8 sm:px-12 py-16 sm:py-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-foreground/20 border border-primary-foreground/30 text-xs font-medium text-primary-foreground mb-6">
-            <Terminal className="w-3.5 h-3.5" />
-            CSE 2123 — Winter 2026
-          </div>
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4 text-primary-foreground">
-            Learn C Programming
+            Introduction to Computer Programming
           </h1>
           <p className="text-base sm:text-lg text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed">
             Master the foundation of modern computing — from variables and control structures to pointers, memory management, and file handling.
@@ -30,7 +27,7 @@ const Index = () => {
           {[
             { icon: GraduationCap, title: `${chapters.length} Comprehensive Chapters`, desc: "Covering every aspect of C programming" },
             { icon: Code, title: "Real Code Snippets", desc: "Practical examples with syntax highlighting" },
-            { icon: Target, title: "Practice Problems", desc: "3 coding problems per chapter" },
+            { icon: Target, title: "Practice Problems", desc: "8 coding problems per chapter" },
             { icon: Layers, title: "Interactive Learning", desc: "Expandable slides, tables, and visual aids" },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="glass-card p-5 flex items-start gap-3">
@@ -78,25 +75,29 @@ const Index = () => {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
         <h2 className="text-2xl font-bold text-foreground mb-8 text-center">All Chapters</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {chapters.map((ch) => (
-            <Link
-              key={ch.id}
-              to={`/${ch.slug}`}
-              className="glass-card p-5 hover:glow-border transition-all duration-300 group"
-            >
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">{ch.icon}</span>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary font-mono">Week {ch.week}</span>
+          {chapters.map((ch) => {
+            const Icon = getChapterIcon(ch.icon);
+            return (
+              <Link
+                key={ch.id}
+                to={`/${ch.slug}`}
+                className="glass-card p-5 hover:glow-border transition-all duration-300 group"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary font-mono">Week {ch.week}</span>
+                    </div>
+                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm truncate">{ch.title}</h3>
                   </div>
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm truncate">{ch.title}</h3>
-                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{ch.slides.length} slides</p>
+                  <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                 </div>
-                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>
