@@ -1,6 +1,8 @@
 export interface CodingProblem {
   question: string;
   answer: string;
+  filename: string;
+  output: string;
 }
 
 export const chapterProblems: Record<string, CodingProblem[]> = {
@@ -12,7 +14,9 @@ export const chapterProblems: Record<string, CodingProblem[]> = {
 int main() {
     printf("Hello, World!");
     return 0;
-}`
+}`,
+      filename: "print_hello_world_on_the.c",
+      output: `Hello, World!`
     },
     {
       question: "Write a C program to print your name, age, and city each on a new line.",
@@ -23,7 +27,11 @@ int main() {
     printf("Age: 20\\n");
     printf("City: Dhaka\\n");
     return 0;
-}`
+}`,
+      filename: "print_your_name_age_and.c",
+      output: `Name: John
+Age: 20
+City: Dhaka`
     },
     {
       question: "Write a C program that prints the result of 15 + 27 using printf.",
@@ -32,7 +40,9 @@ int main() {
 int main() {
     printf("Sum = %d", 15 + 27);
     return 0;
-}`
+}`,
+      filename: "prints_the_result_of_15.c",
+      output: `Sum = 42`
     },
     {
       question: "Write a C program to print a simple pattern using asterisks (a 4x4 square).",
@@ -44,7 +54,12 @@ int main() {
     printf("****\\n");
     printf("****\\n");
     return 0;
-}`
+}`,
+      filename: "print_a_simple_pattern_using.c",
+      output: `****
+****
+****
+****`
     },
     {
       question: "Write a C program that prints the difference and product of two numbers (20 and 5).",
@@ -54,7 +69,10 @@ int main() {
     printf("Difference = %d\\n", 20 - 5);
     printf("Product = %d\\n", 20 * 5);
     return 0;
-}`
+}`,
+      filename: "prints_the_difference_and_product.c",
+      output: `Difference = 15
+Product = 100`
     },
     {
       question: "Write a C program to print a tab-separated list of three programming languages.",
@@ -63,7 +81,9 @@ int main() {
 int main() {
     printf("C\\tC++\\tPython\\n");
     return 0;
-}`
+}`,
+      filename: "print_a_tab_separated_list.c",
+      output: `C	C++	Python`
     },
     {
       question: "Write a C program that uses comments and prints \"Learning C is fun!\".",
@@ -74,7 +94,9 @@ int main() {
     // Print a friendly message
     printf("Learning C is fun!");
     return 0;
-}`
+}`,
+      filename: "uses_comments_and_prints_learning.c",
+      output: `Learning C is fun!`
     },
     {
       question: "Write a C program to print the area of a rectangle with length 10 and width 5.",
@@ -84,7 +106,9 @@ int main() {
     int length = 10, width = 5;
     printf("Area = %d", length * width);
     return 0;
-}`
+}`,
+      filename: "print_the_area_of_a.c",
+      output: `Area = 50`
     }
   ],
   "variables": [
@@ -97,7 +121,9 @@ int main() {
     int sum = a + b;
     printf("Sum = %d", sum);
     return 0;
-}`
+}`,
+      filename: "declare_two_integer_variables_assign.c",
+      output: `Sum = 30`
     },
     {
       question: "Write a C program to swap two numbers using a temporary variable.",
@@ -110,7 +136,9 @@ int main() {
     b = temp;
     printf("a = %d, b = %d", a, b);
     return 0;
-}`
+}`,
+      filename: "swap_two_numbers_using_a.c",
+      output: `a = 10, b = 5`
     },
     {
       question: "Write a C program to find the size of int, float, double, and char data types.",
@@ -122,7 +150,12 @@ int main() {
     printf("double: %lu bytes\\n", sizeof(double));
     printf("char: %lu byte\\n", sizeof(char));
     return 0;
-}`
+}`,
+      filename: "find_the_size_of_int.c",
+      output: `int: 4 bytes
+float: 4 bytes
+double: 8 bytes
+char: 1 byte`
     },
     {
       question: "Write a C program to swap two numbers WITHOUT using a temporary variable.",
@@ -135,7 +168,9 @@ int main() {
     a = a - b;
     printf("a = %d, b = %d", a, b);
     return 0;
-}`
+}`,
+      filename: "swap_two_numbers_without_using.c",
+      output: `a = 3, b = 7`
     },
     {
       question: "Write a C program to compute the average of three numbers stored in variables.",
@@ -146,7 +181,9 @@ int main() {
     float avg = (a + b + c) / 3.0;
     printf("Average = %.2f", avg);
     return 0;
-}`
+}`,
+      filename: "compute_the_average_of_three.c",
+      output: `Average = 20.00`
     },
     {
       question: "Write a C program that uses a constant (using #define) for PI and prints area of a circle.",
@@ -157,7 +194,9 @@ int main() {
     float radius = 5.0;
     printf("Area = %.2f", PI * radius * radius);
     return 0;
-}`
+}`,
+      filename: "uses_a_constant_using_define.c",
+      output: `Area = 78.54`
     },
     {
       question: "Write a C program that takes an integer input from the user and prints it.",
@@ -169,7 +208,9 @@ int main() {
     scanf("%d", &num);
     printf("You entered: %d", num);
     return 0;
-}`
+}`,
+      filename: "takes_an_integer_input_from.c",
+      output: `Enter a number: You entered: 32754`
     },
     {
       question: "Write a C program to demonstrate global vs local variable scope.",
@@ -186,7 +227,10 @@ int main() {
     show();
     printf("Global from main: %d", globalVar);
     return 0;
-}`
+}`,
+      filename: "demonstrate_global_vs_local_variable.c",
+      output: `Local: 50, Global: 100
+Global from main: 100`
     }
   ],
   "expression-and-operators": [
@@ -201,7 +245,9 @@ int main() {
     else
         printf("%d is Odd", num);
     return 0;
-}`
+}`,
+      filename: "check_whether_a_number_is.c",
+      output: `7 is Odd`
     },
     {
       question: "Write a C program to demonstrate pre-increment and post-increment operators.",
@@ -213,7 +259,11 @@ int main() {
     printf("After post: %d\\n", a);
     printf("Pre-increment: %d\\n", ++a);
     return 0;
-}`
+}`,
+      filename: "demonstrate_pre_increment_and_post.c",
+      output: `Post-increment: 5
+After post: 6
+Pre-increment: 7`
     },
     {
       question: "Write a C program to find the largest of three numbers using logical operators.",
@@ -228,7 +278,9 @@ int main() {
     else
         printf("Largest: %d", c);
     return 0;
-}`
+}`,
+      filename: "find_the_largest_of_three.c",
+      output: `Largest: 25`
     },
     {
       question: "Write a C program to demonstrate the ternary (conditional) operator to find max of two numbers.",
@@ -239,7 +291,9 @@ int main() {
     int max = (a > b) ? a : b;
     printf("Max = %d", max);
     return 0;
-}`
+}`,
+      filename: "demonstrate_the_ternary_conditional_operator.c",
+      output: `Max = 12`
     },
     {
       question: "Write a C program to perform bitwise AND, OR, XOR, and NOT on two integers.",
@@ -252,7 +306,12 @@ int main() {
     printf("XOR = %d\\n", a ^ b);
     printf("NOT a = %d\\n", ~a);
     return 0;
-}`
+}`,
+      filename: "perform_bitwise_and_or_xor.c",
+      output: `AND = 8
+OR  = 14
+XOR = 6
+NOT a = -13`
     },
     {
       question: "Write a C program to demonstrate left shift and right shift operators.",
@@ -263,7 +322,10 @@ int main() {
     printf("Left shift by 2: %d\\n", n << 2);
     printf("Right shift by 1: %d\\n", n >> 1);
     return 0;
-}`
+}`,
+      filename: "demonstrate_left_shift_and_right.c",
+      output: `Left shift by 2: 32
+Right shift by 1: 4`
     },
     {
       question: "Write a C program to compute compound interest given principal, rate, and time.",
@@ -275,7 +337,9 @@ int main() {
     double amount = p * pow((1 + r / 100), t);
     printf("Compound Interest = %.2f", amount - p);
     return 0;
-}`
+}`,
+      filename: "compute_compound_interest_given_principal.c",
+      output: `Compound Interest = 102.50`
     },
     {
       question: "Write a C program to evaluate the expression: (a + b) * (c - d) / e using user input.",
@@ -286,7 +350,9 @@ int main() {
     int result = (a + b) * (c - d) / e;
     printf("Result = %d", result);
     return 0;
-}`
+}`,
+      filename: "evaluate_the_expression_a_b.c",
+      output: `Result = 24`
     }
   ],
   "data-types": [
@@ -299,7 +365,9 @@ int main() {
     float fahrenheit = (celsius * 9 / 5) + 32;
     printf("%.2f C = %.2f F", celsius, fahrenheit);
     return 0;
-}`
+}`,
+      filename: "convert_a_temperature_from_celsius.c",
+      output: `37.00 C = 98.60 F`
     },
     {
       question: "Write a C program to demonstrate implicit and explicit type casting.",
@@ -312,7 +380,10 @@ int main() {
     printf("Implicit: %f\\n", result1);
     printf("Explicit: %f\\n", result2);
     return 0;
-}`
+}`,
+      filename: "demonstrate_implicit_and_explicit_type.c",
+      output: `Implicit: 2.000000
+Explicit: 2.500000`
     },
     {
       question: "Write a C program to print the ASCII value of a character entered by the user.",
@@ -322,7 +393,9 @@ int main() {
     char ch = 'A';
     printf("ASCII value of %c = %d", ch, ch);
     return 0;
-}`
+}`,
+      filename: "print_the_ascii_value_of.c",
+      output: `ASCII value of A = 65`
     },
     {
       question: "Write a C program to display the range of signed and unsigned int (using limits.h).",
@@ -334,7 +407,11 @@ int main() {
     printf("INT_MAX  = %d\\n", INT_MAX);
     printf("UINT_MAX = %u\\n", UINT_MAX);
     return 0;
-}`
+}`,
+      filename: "display_the_range_of_signed.c",
+      output: `INT_MIN  = -2147483648
+INT_MAX  = 2147483647
+UINT_MAX = 4294967295`
     },
     {
       question: "Write a C program to convert lowercase character to uppercase using type conversion.",
@@ -345,7 +422,9 @@ int main() {
     char upper = ch - 32;
     printf("Uppercase: %c", upper);
     return 0;
-}`
+}`,
+      filename: "convert_lowercase_character_to_uppercase.c",
+      output: `Uppercase: G`
     },
     {
       question: "Write a C program to demonstrate the use of long, short, and unsigned data types.",
@@ -357,7 +436,11 @@ int main() {
     unsigned int u = 4000000000U;
     printf("short = %d\\nlong = %ld\\nunsigned = %u", s, l, u);
     return 0;
-}`
+}`,
+      filename: "demonstrate_the_use_of_long.c",
+      output: `short = 32000
+long = 1234567890
+unsigned = 4000000000`
     },
     {
       question: "Write a C program to compute the area of a circle using double precision.",
@@ -368,7 +451,9 @@ int main() {
     double area = 3.141592653589793 * radius * radius;
     printf("Area = %.4lf", area);
     return 0;
-}`
+}`,
+      filename: "compute_the_area_of_a.c",
+      output: `Area = 176.7146`
     },
     {
       question: "Write a C program to convert a float number to int and observe truncation.",
@@ -379,7 +464,9 @@ int main() {
     int i = (int)f;
     printf("Float: %.2f, Int: %d", f, i);
     return 0;
-}`
+}`,
+      filename: "convert_a_float_number_to.c",
+      output: `Float: 9.78, Int: 9`
     }
   ],
   "conditional-statement": [
@@ -394,7 +481,9 @@ int main() {
     else
         printf("%d is Not a Leap Year", year);
     return 0;
-}`
+}`,
+      filename: "check_if_a_year_is.c",
+      output: `2024 is a Leap Year`
     },
     {
       question: "Write a C program to create a simple calculator using switch-case (+, -, *, /).",
@@ -411,7 +500,9 @@ int main() {
         default: printf("Invalid operator");
     }
     return 0;
-}`
+}`,
+      filename: "create_a_simple_calculator_using.c",
+      output: `13.00`
     },
     {
       question: "Write a C program to assign a grade (A, B, C, D, F) based on marks using else-if ladder.",
@@ -425,7 +516,9 @@ int main() {
     else if (marks >= 60) printf("Grade: D");
     else                  printf("Grade: F");
     return 0;
-}`
+}`,
+      filename: "assign_a_grade_a_b.c",
+      output: `Grade: C`
     },
     {
       question: "Write a C program to check whether a number is positive, negative, or zero.",
@@ -437,7 +530,9 @@ int main() {
     else if (n < 0)  printf("Negative");
     else             printf("Zero");
     return 0;
-}`
+}`,
+      filename: "check_whether_a_number_is.c",
+      output: `Negative`
     },
     {
       question: "Write a C program to find the largest of three numbers using nested if.",
@@ -453,7 +548,9 @@ int main() {
         else       printf("Largest = %d", c);
     }
     return 0;
-}`
+}`,
+      filename: "find_the_largest_of_three.c",
+      output: `Largest = 9`
     },
     {
       question: "Write a C program to check if a character is a vowel or consonant using switch.",
@@ -468,7 +565,9 @@ int main() {
             printf("Consonant");
     }
     return 0;
-}`
+}`,
+      filename: "check_if_a_character_is.c",
+      output: `Vowel`
     },
     {
       question: "Write a C program to determine whether a triangle is equilateral, isosceles, or scalene.",
@@ -480,7 +579,9 @@ int main() {
     else if (a == b || b == c || a == c) printf("Isosceles");
     else                       printf("Scalene");
     return 0;
-}`
+}`,
+      filename: "determine_whether_a_triangle_is.c",
+      output: `Equilateral`
     },
     {
       question: "Write a C program to check whether a given number is divisible by both 5 and 11.",
@@ -493,7 +594,9 @@ int main() {
     else
         printf("%d is not divisible by both", n);
     return 0;
-}`
+}`,
+      filename: "check_whether_a_given_number.c",
+      output: `55 is divisible by both 5 and 11`
     }
   ],
   "for-loop": [
@@ -507,7 +610,18 @@ int main() {
         printf("%d x %d = %d\\n", num, i, num * i);
     }
     return 0;
-}`
+}`,
+      filename: "print_the_multiplication_table_of.c",
+      output: `5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50`
     },
     {
       question: "Write a C program to find the factorial of a number using a for loop.",
@@ -519,7 +633,9 @@ int main() {
     for (int i = 1; i <= n; i++) fact *= i;
     printf("Factorial of %d = %lld", n, fact);
     return 0;
-}`
+}`,
+      filename: "find_the_factorial_of_a.c",
+      output: `Factorial of 5 = 120`
     },
     {
       question: "Write a C program to print the sum of first N natural numbers using a while loop.",
@@ -530,7 +646,9 @@ int main() {
     while (i <= n) { sum += i; i++; }
     printf("Sum = %d", sum);
     return 0;
-}`
+}`,
+      filename: "print_the_sum_of_first.c",
+      output: `Sum = 55`
     },
     {
       question: "Write a C program to print the Fibonacci series up to N terms using a for loop.",
@@ -543,7 +661,9 @@ int main() {
         c = a + b; a = b; b = c;
     }
     return 0;
-}`
+}`,
+      filename: "print_the_fibonacci_series_up.c",
+      output: `0 1 1 2 3 5 8 13 21 34`
     },
     {
       question: "Write a C program to count the number of digits in an integer using a while loop.",
@@ -554,7 +674,9 @@ int main() {
     while (n != 0) { n /= 10; count++; }
     printf("Digits = %d", count);
     return 0;
-}`
+}`,
+      filename: "count_the_number_of_digits.c",
+      output: `Digits = 5`
     },
     {
       question: "Write a C program to reverse a number using a loop.",
@@ -568,7 +690,9 @@ int main() {
     }
     printf("Reversed = %d", rev);
     return 0;
-}`
+}`,
+      filename: "reverse_a_number_using_a.c",
+      output: `Reversed = 4321`
     },
     {
       question: "Write a C program to print a right-angled triangle pattern of stars (5 rows).",
@@ -580,7 +704,13 @@ int main() {
         printf("\\n");
     }
     return 0;
-}`
+}`,
+      filename: "print_a_right_angled_triangle.c",
+      output: `* 
+* * 
+* * * 
+* * * * 
+* * * * *`
     },
     {
       question: "Write a C program to check whether a number is prime using a for loop.",
@@ -594,7 +724,9 @@ int main() {
     }
     printf("%d is %s", n, isPrime ? "Prime" : "Not Prime");
     return 0;
-}`
+}`,
+      filename: "check_whether_a_number_is.c",
+      output: `29 is Prime`
     }
   ],
   "array": [
@@ -609,7 +741,9 @@ int main() {
         if (arr[i] > max) max = arr[i];
     printf("Largest element: %d", max);
     return 0;
-}`
+}`,
+      filename: "find_the_largest_element_in.c",
+      output: `Largest element: 56`
     },
     {
       question: "Write a C program to reverse an array.",
@@ -623,7 +757,9 @@ int main() {
     }
     for (int i = 0; i < n; i++) printf("%d ", arr[i]);
     return 0;
-}`
+}`,
+      filename: "reverse_an_array.c",
+      output: `5 4 3 2 1`
     },
     {
       question: "Write a C program to find the sum of all elements in a 2D array (3x3 matrix).",
@@ -637,7 +773,9 @@ int main() {
             sum += matrix[i][j];
     printf("Sum = %d", sum);
     return 0;
-}`
+}`,
+      filename: "find_the_sum_of_all.c",
+      output: `Sum = 45`
     },
     {
       question: "Write a C program to find the smallest element in an array.",
@@ -650,7 +788,9 @@ int main() {
         if (arr[i] < min) min = arr[i];
     printf("Smallest = %d", min);
     return 0;
-}`
+}`,
+      filename: "find_the_smallest_element_in.c",
+      output: `Smallest = 3`
     },
     {
       question: "Write a C program to compute the average of array elements.",
@@ -662,7 +802,9 @@ int main() {
     for (int i = 0; i < n; i++) sum += arr[i];
     printf("Average = %.2f", (float)sum / n);
     return 0;
-}`
+}`,
+      filename: "compute_the_average_of_array.c",
+      output: `Average = 30.00`
     },
     {
       question: "Write a C program to perform linear search in an array.",
@@ -676,7 +818,9 @@ int main() {
     if (idx != -1) printf("Found at index %d", idx);
     else           printf("Not found");
     return 0;
-}`
+}`,
+      filename: "perform_linear_search_in_an.c",
+      output: `Found at index 3`
     },
     {
       question: "Write a C program to sort an array in ascending order using bubble sort.",
@@ -691,7 +835,9 @@ int main() {
             }
     for (int i = 0; i < n; i++) printf("%d ", arr[i]);
     return 0;
-}`
+}`,
+      filename: "sort_an_array_in_ascending.c",
+      output: `1 2 5 8 9`
     },
     {
       question: "Write a C program to add two 2x2 matrices.",
@@ -709,7 +855,10 @@ int main() {
         printf("\\n");
     }
     return 0;
-}`
+}`,
+      filename: "add_two_2x2_matrices.c",
+      output: `6 8 
+10 12`
     }
   ],
   "string": [
@@ -723,7 +872,9 @@ int main() {
     while (str[len] != '\\0') len++;
     printf("Length: %d", len);
     return 0;
-}`
+}`,
+      filename: "find_the_length_of_a.c",
+      output: `Length: 5`
     },
     {
       question: "Write a C program to check if a string is a palindrome.",
@@ -737,7 +888,9 @@ int main() {
         if (str[i] != str[len - 1 - i]) { isPalin = 0; break; }
     printf("%s is %sa palindrome", str, isPalin ? "" : "not ");
     return 0;
-}`
+}`,
+      filename: "check_if_a_string_is.c",
+      output: `madam is a palindrome`
     },
     {
       question: "Write a C program to count the number of vowels in a string.",
@@ -754,7 +907,9 @@ int main() {
     }
     printf("Vowels: %d", count);
     return 0;
-}`
+}`,
+      filename: "count_the_number_of_vowels.c",
+      output: `Vowels: 3`
     },
     {
       question: "Write a C program to convert a string to uppercase.",
@@ -767,7 +922,9 @@ int main() {
         str[i] = toupper(str[i]);
     printf("%s", str);
     return 0;
-}`
+}`,
+      filename: "convert_a_string_to_uppercase.c",
+      output: `HELLO WORLD`
     },
     {
       question: "Write a C program to concatenate two strings without using strcat().",
@@ -782,7 +939,9 @@ int main() {
     a[i] = '\\0';
     printf("%s", a);
     return 0;
-}`
+}`,
+      filename: "concatenate_two_strings_without_using.c",
+      output: `Hello, World!`
     },
     {
       question: "Write a C program to count the number of words in a string.",
@@ -795,7 +954,9 @@ int main() {
         if (str[i] == ' ') count++;
     printf("Words: %d", count);
     return 0;
-}`
+}`,
+      filename: "count_the_number_of_words.c",
+      output: `Words: 4`
     },
     {
       question: "Write a C program to compare two strings without using strcmp().",
@@ -810,7 +971,9 @@ int main() {
     }
     printf("Strings are %s", equal ? "equal" : "not equal");
     return 0;
-}`
+}`,
+      filename: "compare_two_strings_without_using.c",
+      output: `Strings are equal`
     },
     {
       question: "Write a C program to reverse a string in place.",
@@ -825,7 +988,9 @@ int main() {
     }
     printf("%s", str);
     return 0;
-}`
+}`,
+      filename: "reverse_a_string_in_place.c",
+      output: `gnimmargorP`
     }
   ],
   "pointer": [
@@ -842,7 +1007,9 @@ int main() {
     swap(&x, &y);
     printf("x = %d, y = %d", x, y);
     return 0;
-}`
+}`,
+      filename: "swap_two_numbers_using_pointers.c",
+      output: `x = 20, y = 10`
     },
     {
       question: "Write a C program to access array elements using pointers.",
@@ -854,7 +1021,13 @@ int main() {
     for (int i = 0; i < 5; i++)
         printf("arr[%d] = %d\\n", i, *(ptr + i));
     return 0;
-}`
+}`,
+      filename: "access_array_elements_using_pointers.c",
+      output: `arr[0] = 10
+arr[1] = 20
+arr[2] = 30
+arr[3] = 40
+arr[4] = 50`
     },
     {
       question: "Write a C program to find the length of a string using a pointer.",
@@ -867,7 +1040,9 @@ int main() {
     while (*ptr != '\\0') { len++; ptr++; }
     printf("Length: %d", len);
     return 0;
-}`
+}`,
+      filename: "find_the_length_of_a.c",
+      output: `Length: 7`
     },
     {
       question: "Write a C program to print the address and value of a variable using a pointer.",
@@ -879,7 +1054,10 @@ int main() {
     printf("Address: %p\\n", (void*)p);
     printf("Value:   %d\\n", *p);
     return 0;
-}`
+}`,
+      filename: "print_the_address_and_value.c",
+      output: `Address: 0x7f120a903354
+Value:   42`
     },
     {
       question: "Write a C program to find the sum of array elements using pointer arithmetic.",
@@ -891,7 +1069,9 @@ int main() {
     for (int i = 0; i < 5; i++) sum += *(p + i);
     printf("Sum = %d", sum);
     return 0;
-}`
+}`,
+      filename: "find_the_sum_of_array.c",
+      output: `Sum = 15`
     },
     {
       question: "Write a C program to demonstrate a pointer to a pointer (double pointer).",
@@ -905,7 +1085,11 @@ int main() {
     printf("*p = %d\\n", *p);
     printf("**pp = %d\\n", **pp);
     return 0;
-}`
+}`,
+      filename: "demonstrate_a_pointer_to_a.c",
+      output: `x = 10
+*p = 10
+**pp = 10`
     },
     {
       question: "Write a C program to copy one string to another using pointers.",
@@ -917,7 +1101,9 @@ int main() {
     while ((*d++ = *s++) != '\\0');
     printf("Copied: %s", dest);
     return 0;
-}`
+}`,
+      filename: "copy_one_string_to_another.c",
+      output: `Copied: Hello`
     },
     {
       question: "Write a C program to find the largest element in an array using pointers.",
@@ -930,7 +1116,9 @@ int main() {
         if (*(p + i) > max) max = *(p + i);
     printf("Largest = %d", max);
     return 0;
-}`
+}`,
+      filename: "find_the_largest_element_in.c",
+      output: `Largest = 42`
     }
   ],
   "structure": [
@@ -948,7 +1136,11 @@ int main() {
     struct Student s = {"Alice", 101, 92.5};
     printf("Name: %s\\nRoll: %d\\nMarks: %.1f", s.name, s.roll, s.marks);
     return 0;
-}`
+}`,
+      filename: "store_and_display_student_info.c",
+      output: `Name: Alice
+Roll: 101
+Marks: 92.5`
     },
     {
       question: "Write a C program to pass a structure to a function and print its members.",
@@ -964,7 +1156,9 @@ int main() {
     struct Point p1 = {3, 7};
     display(p1);
     return 0;
-}`
+}`,
+      filename: "pass_a_structure_to_a.c",
+      output: `(3, 7)`
     },
     {
       question: "Write a C program to create an array of structures to store 3 books (title, price).",
@@ -981,7 +1175,11 @@ int main() {
     for (int i = 0; i < 3; i++)
         printf("%s - $%.0f\\n", books[i].title, books[i].price);
     return 0;
-}`
+}`,
+      filename: "create_an_array_of_structures.c",
+      output: `C Programming - $350
+Data Structures - $450
+Algorithms - $500`
     },
     {
       question: "Write a C program using a nested structure (Address inside Employee).",
@@ -997,7 +1195,9 @@ int main() {
     struct Employee e = {"Bob", {"Dhaka", 1207}};
     printf("%s lives in %s (%d)", e.name, e.addr.city, e.addr.zip);
     return 0;
-}`
+}`,
+      filename: "using_a_nested_structure_address.c",
+      output: `Bob lives in Dhaka (1207)`
     },
     {
       question: "Write a C program using a pointer to a structure to access its members.",
@@ -1010,7 +1210,9 @@ int main() {
     struct Car *p = &c;
     printf("%s (%d)", p->model, p->year);
     return 0;
-}`
+}`,
+      filename: "using_a_pointer_to_a.c",
+      output: `Toyota (2023)`
     },
     {
       question: "Write a C program to compute the total marks of 3 students stored in an array of structures.",
@@ -1024,7 +1226,9 @@ int main() {
     for (int i = 0; i < 3; i++) total += s[i].marks;
     printf("Total = %d", total);
     return 0;
-}`
+}`,
+      filename: "compute_the_total_marks_of.c",
+      output: `Total = 245`
     },
     {
       question: "Write a C program using typedef with a structure to represent a Date.",
@@ -1038,7 +1242,9 @@ int main() {
     Date today = {18, 4, 2026};
     printf("Date: %02d/%02d/%d", today.day, today.month, today.year);
     return 0;
-}`
+}`,
+      filename: "using_typedef_with_a_structure.c",
+      output: `Date: 18/04/2026`
     },
     {
       question: "Write a C program to find the student with the highest marks from an array of structures.",
@@ -1053,7 +1259,9 @@ int main() {
         if (s[i].marks > s[idx].marks) idx = i;
     printf("Top: %s (%d)", s[idx].name, s[idx].marks);
     return 0;
-}`
+}`,
+      filename: "find_the_student_with_the.c",
+      output: `Top: B (95)`
     }
   ],
   "union": [
@@ -1068,7 +1276,10 @@ int main() {
     printf("Struct size: %lu\\n", sizeof(struct S));
     printf("Union size: %lu\\n", sizeof(union U));
     return 0;
-}`
+}`,
+      filename: "demonstrate_the_difference_between_struct.c",
+      output: `Struct size: 12
+Union size: 4`
     },
     {
       question: "Write a C program to store and access different data types using a union.",
@@ -1082,7 +1293,11 @@ int main() {
     d.f = 3.14; printf("Float: %.2f\\n", d.f);
     d.c = 'A';  printf("Char: %c\\n", d.c);
     return 0;
-}`
+}`,
+      filename: "store_and_access_different_data.c",
+      output: `Integer: 42
+Float: 3.14
+Char: A`
     },
     {
       question: "Write a C program using an enum inside a union to represent a shape type.",
@@ -1102,7 +1317,9 @@ int main() {
     if (s == CIRCLE)
         printf("Circle radius: %.1f\\n", d.radius);
     return 0;
-}`
+}`,
+      filename: "using_an_enum_inside_a.c",
+      output: `Circle radius: 5.0`
     },
     {
       question: "Write a C program to use a union to interpret bytes of an int as chars.",
@@ -1119,7 +1336,12 @@ int main() {
     for (int i = 0; i < 4; i++)
         printf("Byte %d = %c\\n", i, u.b[i]);
     return 0;
-}`
+}`,
+      filename: "use_a_union_to_interpret.c",
+      output: `Byte 0 = D
+Byte 1 = C
+Byte 2 = B
+Byte 3 = A`
     },
     {
       question: "Write a C program using a union inside a struct (tagged union) to store either int or float.",
@@ -1136,7 +1358,9 @@ int main() {
     if (v.type == 0) printf("Int: %d", v.data.i);
     else             printf("Float: %.2f", v.data.f);
     return 0;
-}`
+}`,
+      filename: "using_a_union_inside_a.c",
+      output: `Float: 9.81`
     },
     {
       question: "Write a C program to use a union pointer to access its members.",
@@ -1152,7 +1376,10 @@ int main() {
     p->f = 2.5;
     printf("Float via pointer: %.2f\\n", p->f);
     return 0;
-}`
+}`,
+      filename: "use_a_union_pointer_to.c",
+      output: `Int via pointer: 100
+Float via pointer: 2.50`
     },
     {
       question: "Write a C program to demonstrate that all union members share the same memory address.",
@@ -1166,7 +1393,11 @@ int main() {
     printf("&f = %p\\n", (void*)&t.f);
     printf("&c = %p\\n", (void*)&t.c);
     return 0;
-}`
+}`,
+      filename: "demonstrate_that_all_union_members.c",
+      output: `&i = 0x7fe77082035c
+&f = 0x7fe77082035c
+&c = 0x7fe77082035c`
     },
     {
       question: "Write a C program using an array of unions to store 3 different values.",
@@ -1181,7 +1412,9 @@ int main() {
     items[2].i = 99;
     printf("%d %.2f %d", items[0].i, items[1].f, items[2].i);
     return 0;
-}`
+}`,
+      filename: "using_an_array_of_unions.c",
+      output: `10 3.14 99`
     }
   ],
   "function": [
@@ -1200,7 +1433,9 @@ int main() {
     int num = 17;
     printf("%d is %s", num, isPrime(num) ? "Prime" : "Not Prime");
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_to.c",
+      output: `17 is Prime`
     },
     {
       question: "Write a C function to calculate the power of a number (base^exponent).",
@@ -1215,7 +1450,9 @@ long long power(int base, int exp) {
 int main() {
     printf("2^10 = %lld", power(2, 10));
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_to.c",
+      output: `2^10 = 1024`
     },
     {
       question: "Write a C program using call by reference to find the maximum and minimum of an array.",
@@ -1235,7 +1472,9 @@ int main() {
     findMinMax(arr, 5, &min, &max);
     printf("Min: %d, Max: %d", min, max);
     return 0;
-}`
+}`,
+      filename: "using_call_by_reference_to.c",
+      output: `Min: 1, Max: 9`
     },
     {
       question: "Write a C function to compute the GCD of two numbers.",
@@ -1249,7 +1488,9 @@ int gcd(int a, int b) {
 int main() {
     printf("GCD(36, 60) = %d", gcd(36, 60));
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_to.c",
+      output: `GCD(36, 60) = 12`
     },
     {
       question: "Write a C function to check whether a number is a perfect number.",
@@ -1265,7 +1506,9 @@ int isPerfect(int n) {
 int main() {
     printf("28 is %s", isPerfect(28) ? "Perfect" : "Not Perfect");
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_to.c",
+      output: `28 is Perfect`
     },
     {
       question: "Write a C function that returns the square of an integer.",
@@ -1276,7 +1519,9 @@ int square(int n) { return n * n; }
 int main() {
     printf("Square of 9 = %d", square(9));
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_that.c",
+      output: `Square of 9 = 81`
     },
     {
       question: "Write a C function to count the number of digits in an integer.",
@@ -1292,7 +1537,9 @@ int countDigits(int n) {
 int main() {
     printf("Digits in 90876 = %d", countDigits(90876));
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_to.c",
+      output: `Digits in 90876 = 5`
     },
     {
       question: "Write a C function that takes an array and returns its sum.",
@@ -1308,7 +1555,9 @@ int main() {
     int a[] = {1, 2, 3, 4, 5};
     printf("Sum = %d", sumArray(a, 5));
     return 0;
-}`
+}`,
+      filename: "write_a_c_function_that.c",
+      output: `Sum = 15`
     }
   ],
   "recursion": [
@@ -1324,7 +1573,9 @@ int fibonacci(int n) {
 int main() {
     for (int i = 0; i < 10; i++) printf("%d ", fibonacci(i));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `0 1 1 2 3 5 8 13 21 34`
     },
     {
       question: "Write a recursive C function to find the sum of digits of a number.",
@@ -1338,7 +1589,9 @@ int sumDigits(int n) {
 int main() {
     printf("Sum of digits of 1234 = %d", sumDigits(1234));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `Sum of digits of 1234 = 10`
     },
     {
       question: "Write a recursive C function to reverse a string.",
@@ -1356,7 +1609,9 @@ int main() {
     reverse(str, 0, strlen(str) - 1);
     printf("%s", str);
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `olleH`
     },
     {
       question: "Write a recursive C function to compute factorial of N.",
@@ -1370,7 +1625,9 @@ long long fact(int n) {
 int main() {
     printf("6! = %lld", fact(6));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `6! = 720`
     },
     {
       question: "Write a recursive C function to compute the power (base^exp).",
@@ -1384,7 +1641,9 @@ long long power(int b, int e) {
 int main() {
     printf("3^5 = %lld", power(3, 5));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `3^5 = 243`
     },
     {
       question: "Write a recursive C function to compute the GCD of two numbers.",
@@ -1398,7 +1657,9 @@ int gcd(int a, int b) {
 int main() {
     printf("GCD(48, 18) = %d", gcd(48, 18));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `GCD(48, 18) = 6`
     },
     {
       question: "Write a recursive C function to compute the sum of first N natural numbers.",
@@ -1412,7 +1673,9 @@ int sumN(int n) {
 int main() {
     printf("Sum 1..100 = %d", sumN(100));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `Sum 1..100 = 5050`
     },
     {
       question: "Write a recursive C function to perform binary search on a sorted array.",
@@ -1430,7 +1693,9 @@ int main() {
     int a[] = {1, 3, 5, 7, 9, 11};
     printf("Index = %d", bsearch_r(a, 0, 5, 7));
     return 0;
-}`
+}`,
+      filename: "write_a_recursive_c_function.c",
+      output: `Index = 3`
     }
   ],
   "input-output": [
@@ -1449,7 +1714,9 @@ int main() {
     printf("Read: %s", buffer);
     fclose(fp);
     return 0;
-}`
+}`,
+      filename: "read_and_write_a_string.c",
+      output: `Read: Hello, File!`
     },
     {
       question: "Write a C program to count the number of characters in a file.",
@@ -1462,7 +1729,9 @@ int main() {
     fclose(fp);
     printf("Characters: %d", count);
     return 0;
-}`
+}`,
+      filename: "count_the_number_of_characters.c",
+      output: `// Output depends on user input`
     },
     {
       question: "Write a C program to copy contents from one file to another.",
@@ -1476,7 +1745,9 @@ int main() {
     fclose(src); fclose(dest);
     printf("File copied successfully!");
     return 0;
-}`
+}`,
+      filename: "copy_contents_from_one_file.c",
+      output: `// Output depends on user input`
     },
     {
       question: "Write a C program to count the number of lines in a file.",
@@ -1490,7 +1761,9 @@ int main() {
     fclose(fp);
     printf("Lines: %d", lines);
     return 0;
-}`
+}`,
+      filename: "count_the_number_of_lines.c",
+      output: `// Output depends on user input`
     },
     {
       question: "Write a C program to append text to an existing file.",
@@ -1502,7 +1775,9 @@ int main() {
     fclose(fp);
     printf("Appended successfully!");
     return 0;
-}`
+}`,
+      filename: "append_text_to_an_existing.c",
+      output: `Appended successfully!`
     },
     {
       question: "Write a C program to read a number from the user using scanf and print its square.",
@@ -1514,7 +1789,9 @@ int main() {
     scanf("%d", &n);
     printf("Square = %d", n * n);
     return 0;
-}`
+}`,
+      filename: "read_a_number_from_the.c",
+      output: `Enter a number: Square = 1069290000`
     },
     {
       question: "Write a C program to write 5 integers to a file using fprintf.",
@@ -1527,7 +1804,9 @@ int main() {
     fclose(fp);
     printf("Written!");
     return 0;
-}`
+}`,
+      filename: "write_5_integers_to_a.c",
+      output: `Written!`
     },
     {
       question: "Write a C program to read integers from a file and print their sum.",
@@ -1540,7 +1819,9 @@ int main() {
     fclose(fp);
     printf("Sum = %d", sum);
     return 0;
-}`
+}`,
+      filename: "read_integers_from_a_file.c",
+      output: `Sum = 150`
     }
   ],
   "advance-c-programming-concepts": [
@@ -1558,7 +1839,9 @@ int main() {
     printf("Average: %.2f", sum / n);
     free(arr);
     return 0;
-}`
+}`,
+      filename: "dynamically_allocate_memory_for_an.c",
+      output: `Average: 30.00`
     },
     {
       question: "Write a C program to use a function pointer to call different arithmetic operations.",
@@ -1572,7 +1855,10 @@ int main() {
     op = add; printf("Add: %d\\n", op(10, 5));
     op = sub; printf("Sub: %d\\n", op(10, 5));
     return 0;
-}`
+}`,
+      filename: "use_a_function_pointer_to.c",
+      output: `Add: 15
+Sub: 5`
     },
     {
       question: "Write a C program to demonstrate the use of command line arguments.",
@@ -1584,7 +1870,10 @@ int main(int argc, char *argv[]) {
     for (int i = 1; i < argc; i++)
         printf("arg[%d] = %s\\n", i, argv[i]);
     return 0;
-}`
+}`,
+      filename: "demonstrate_the_use_of_command.c",
+      output: `Program: /tmp/cprobs/p114.out
+Arguments: 0`
     },
     {
       question: "Write a C program to resize a dynamic array using realloc.",
@@ -1599,7 +1888,9 @@ int main() {
     for (int i = 0; i < 5; i++) printf("%d ", arr[i]);
     free(arr);
     return 0;
-}`
+}`,
+      filename: "resize_a_dynamic_array_using.c",
+      output: `1 2 3 4 5`
     },
     {
       question: "Write a C program to use calloc to allocate and zero-initialize an array.",
@@ -1612,7 +1903,9 @@ int main() {
     for (int i = 0; i < n; i++) printf("%d ", arr[i]);
     free(arr);
     return 0;
-}`
+}`,
+      filename: "use_calloc_to_allocate_and.c",
+      output: `0 0 0 0 0`
     },
     {
       question: "Write a C program using bit manipulation to check if a number is a power of 2.",
@@ -1626,7 +1919,10 @@ int main() {
     printf("16: %s\\n", isPowerOfTwo(16) ? "Yes" : "No");
     printf("18: %s\\n", isPowerOfTwo(18) ? "Yes" : "No");
     return 0;
-}`
+}`,
+      filename: "using_bit_manipulation_to_check.c",
+      output: `16: Yes
+18: No`
     },
     {
       question: "Write a C program to demonstrate a simple linked list node creation using malloc.",
@@ -1646,7 +1942,9 @@ int main() {
     while (p != NULL) { printf("%d ", p->data); p = p->next; }
     free(head->next); free(head);
     return 0;
-}`
+}`,
+      filename: "demonstrate_a_simple_linked_list.c",
+      output: `10 20`
     },
     {
       question: "Write a C program using a function pointer array to act as a small calculator.",
@@ -1662,7 +1960,11 @@ int main() {
     for (int i = 0; i < 3; i++)
         printf("%s(6,3) = %d\\n", names[i], ops[i](6, 3));
     return 0;
-}`
+}`,
+      filename: "using_a_function_pointer_array.c",
+      output: `Add(6,3) = 9
+Sub(6,3) = 3
+Mul(6,3) = 18`
     }
   ]
 };
