@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Code, ArrowRight, GraduationCap, Target, Layers } from "lucide-react";
 import { chapters } from "../data/chapters";
 import { getChapterIcon } from "../lib/iconMap";
+import ConceptSlider from "../components/ConceptSlider";
 
 const Index = () => {
   return (
@@ -70,6 +71,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Concept Slider */}
+      <ConceptSlider />
 
       {/* Chapters Grid */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
