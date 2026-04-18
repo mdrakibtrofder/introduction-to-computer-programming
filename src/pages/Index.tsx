@@ -27,7 +27,7 @@ const Index = () => {
           {[
             { icon: GraduationCap, title: `${chapters.length} Comprehensive Chapters`, desc: "Covering every aspect of C programming" },
             { icon: Code, title: "Real Code Snippets", desc: "Practical examples with syntax highlighting" },
-            { icon: Target, title: "Practice Problems", desc: "3 coding problems per chapter" },
+            { icon: Target, title: "Practice Problems", desc: "8 coding problems per chapter" },
             { icon: Layers, title: "Interactive Learning", desc: "Expandable slides, tables, and visual aids" },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="glass-card p-5 flex items-start gap-3">
