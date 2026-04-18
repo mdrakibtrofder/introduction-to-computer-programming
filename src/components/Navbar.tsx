@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <span className="font-mono font-bold text-primary text-sm">C</span>
             </div>
-            <span className="font-semibold text-foreground hidden sm:block">Learn C Programming</span>
+            <span className="font-semibold text-foreground hidden sm:block">Introduction to Computer Programming</span>
           </Link>
 
           {/* Desktop */}
