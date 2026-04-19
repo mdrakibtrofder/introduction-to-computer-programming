@@ -15,7 +15,7 @@ export const chapters: Chapter[] = [
     id: 1,
     slug: "introduction-to-c-programming",
     title: "Introduction to C Programming",
-    week: 2,
+    week: 1,
     description: "Overview of programming paradigms, structured programming principles (sequence, selection, iteration), computational thinking; introduction to C programming language and development environment",
     icon: "Rocket",
     slides: [
