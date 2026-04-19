@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   Variable, GitBranch, Repeat, Boxes, Type, FunctionSquare,
   MousePointer2, Building2, FileText, Sparkles, ChevronLeft, ChevronRight,
+  Layers, RotateCw,
   type LucideIcon,
 } from "lucide-react";
 
@@ -11,7 +12,7 @@ interface Concept {
   tagline: string;
   description: string;
   snippet: string;
-  accent: string; // tailwind gradient classes
+  accent: string;
 }
 
 const concepts: Concept[] = [
@@ -64,6 +65,14 @@ const concepts: Concept[] = [
     accent: "from-indigo-500 to-blue-500",
   },
   {
+    icon: RotateCw,
+    title: "Recursion",
+    tagline: "A function that calls itself",
+    description: "Recursion solves problems by breaking them into smaller versions of the same problem — elegant for factorials, trees, and search.",
+    snippet: `int fact(int n) {\n  if (n <= 1) return 1;\n  return n * fact(n - 1);\n}`,
+    accent: "from-fuchsia-500 to-pink-500",
+  },
+  {
     icon: MousePointer2,
     title: "Pointers",
     tagline: "Direct access to memory",
@@ -78,6 +87,14 @@ const concepts: Concept[] = [
     description: "Structures bundle different data types into a single unit — like a custom blueprint for real-world things.",
     snippet: `struct Student {\n  char name[20];\n  int id;\n};`,
     accent: "from-teal-500 to-emerald-500",
+  },
+  {
+    icon: Layers,
+    title: "Unions",
+    tagline: "Shared memory for multiple types",
+    description: "A union lets several members share the same memory location — useful when only one value is needed at a time.",
+    snippet: `union Data {\n  int i;\n  float f;\n  char str[20];\n};`,
+    accent: "from-sky-500 to-indigo-500",
   },
   {
     icon: FileText,
