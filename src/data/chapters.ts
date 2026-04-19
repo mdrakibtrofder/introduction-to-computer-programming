@@ -139,6 +139,161 @@ int main() {
     ]
   },
   {
+    id: 16,
+    slug: "algorithm-development-and-representation",
+    title: "Algorithm Development and Representation",
+    week: 2,
+    description: "Learn how to design solutions before writing code — express algorithms with pseudocode and visualize control flow using flowcharts.",
+    icon: "Workflow",
+    slides: [
+      {
+        title: "What is an Algorithm?",
+        subtitle: "A step-by-step recipe for solving a problem",
+        bullets: [
+          "**Definition:** A finite, ordered sequence of well-defined steps that solves a specific problem.",
+          "**Properties:** Input, Output, Definiteness, Finiteness, Effectiveness.",
+          "**Why it matters:** Good algorithms lead to correct, efficient, and maintainable programs.",
+          "**Real-world analogy:** A cooking recipe — precise ingredients (input), clear steps, and a final dish (output)."
+        ],
+        note: "Always design the algorithm BEFORE writing code. It saves hours of debugging later!"
+      },
+      {
+        title: "Pseudocode",
+        subtitle: "Plain-English description of an algorithm",
+        bullets: [
+          "**What is it?** A semi-formal way to describe logic using everyday language mixed with programming keywords.",
+          "**No strict syntax:** It is *not* a programming language — focus is on clarity, not compilation.",
+          "**Common keywords:** `BEGIN`, `END`, `IF/ELSE`, `WHILE`, `FOR`, `INPUT`, `OUTPUT`, `RETURN`.",
+          "**Benefit:** Language-independent — the same pseudocode can be implemented in C, Python, Java, etc."
+        ],
+        code: {
+          title: "find_largest.pseudo",
+          code: `BEGIN
+  INPUT a, b, c
+  IF a > b AND a > c THEN
+      OUTPUT "a is largest"
+  ELSE IF b > c THEN
+      OUTPUT "b is largest"
+  ELSE
+      OUTPUT "c is largest"
+  ENDIF
+END`
+        }
+      },
+      {
+        title: "Pseudocode — Best Practices",
+        subtitle: "Write pseudocode that anyone can read",
+        bullets: [
+          "**Use indentation** to show nested blocks (loops, conditionals).",
+          "**Capitalize keywords** (`IF`, `WHILE`, `RETURN`) to distinguish them from variables.",
+          "**Be language-agnostic:** avoid `printf`, `scanf`, `cout` — write `OUTPUT`, `INPUT` instead.",
+          "**One action per line** — keep statements short and unambiguous.",
+          "**Add comments** with `//` when logic isn't obvious."
+        ],
+        code: {
+          title: "sum_n_numbers.pseudo",
+          code: `BEGIN
+  INPUT n
+  SET sum = 0
+  FOR i FROM 1 TO n DO
+      sum = sum + i
+  ENDFOR
+  OUTPUT sum
+END`
+        }
+      },
+      {
+        title: "Flowcharts",
+        subtitle: "Visualize the flow of your algorithm",
+        bullets: [
+          "**What is it?** A diagram that uses standard symbols connected by arrows to represent steps and flow of control.",
+          "**Why use it?** Easier to spot logical errors and explain logic to non-programmers.",
+          "**Direction:** Always flows top-to-bottom or left-to-right; arrows show the path of execution."
+        ],
+        note: "A picture is worth a thousand lines of code — use flowcharts to clarify complex logic."
+      },
+      {
+        title: "Flowchart Symbols",
+        subtitle: "Standard shapes you must know",
+        table: {
+          headers: ["Symbol", "Name", "Purpose"],
+          rows: [
+            ["⬭ Oval", "Terminator", "Start / End of the algorithm"],
+            ["▭ Rectangle", "Process", "Any computation or assignment (e.g. `sum = a + b`)"],
+            ["▱ Parallelogram", "Input/Output", "Reading data or displaying results"],
+            ["◇ Diamond", "Decision", "A condition that branches flow (Yes / No)"],
+            ["→ Arrow", "Flow Line", "Direction of execution"],
+            ["○ Circle", "Connector", "Joins parts of a flowchart on the same/another page"]
+          ]
+        }
+      },
+      {
+        title: "Example: Even or Odd Flowchart",
+        subtitle: "Putting symbols together",
+        bullets: [
+          "**Step 1 (Oval):** Start",
+          "**Step 2 (Parallelogram):** Input number `n`",
+          "**Step 3 (Diamond):** Is `n % 2 == 0`?",
+          "**Step 4a (Parallelogram):** If Yes → Output \"Even\"",
+          "**Step 4b (Parallelogram):** If No → Output \"Odd\"",
+          "**Step 5 (Oval):** End"
+        ],
+        code: {
+          title: "even_or_odd.pseudo",
+          code: `BEGIN
+  INPUT n
+  IF n MOD 2 = 0 THEN
+      OUTPUT "Even"
+  ELSE
+      OUTPUT "Odd"
+  ENDIF
+END`
+        }
+      },
+      {
+        title: "Pseudocode vs Flowchart",
+        subtitle: "Two sides of the same coin",
+        table: {
+          headers: ["Aspect", "Pseudocode", "Flowchart"],
+          rows: [
+            ["Form", "Textual", "Graphical"],
+            ["Best for", "Detailed logic, longer algorithms", "Quick visual overview, decision-heavy logic"],
+            ["Tools needed", "Any text editor", "Drawing tool (draw.io, Lucidchart)"],
+            ["Easier to modify", "Yes", "No (redraw required)"],
+            ["Beginner friendly", "Medium", "High"]
+          ]
+        },
+        note: "Use BOTH together — flowchart to visualize, pseudocode to detail."
+      },
+      {
+        title: "From Algorithm to C Code",
+        subtitle: "Bridging design and implementation",
+        bullets: [
+          "Translate each pseudocode line into the corresponding C statement.",
+          "`INPUT` → `scanf()` | `OUTPUT` → `printf()`",
+          "`IF/ELSE` → `if () { } else { }`",
+          "`FOR/WHILE` → `for () { }` / `while () { }`",
+          "`SET x = …` → `int x = …;`"
+        ],
+        code: {
+          title: "sum_1_to_n.c",
+          code: `#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+    printf("Sum = %d", sum);
+    return 0;
+}`
+        },
+        note: "Once your pseudocode is solid, the C code almost writes itself."
+      }
+    ]
+  },
+  {
     id: 2,
     slug: "variables",
     title: "Variables",
