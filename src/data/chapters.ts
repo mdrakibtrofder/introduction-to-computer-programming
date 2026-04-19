@@ -15,7 +15,7 @@ export const chapters: Chapter[] = [
     id: 1,
     slug: "introduction-to-c-programming",
     title: "Introduction to C Programming",
-    week: 1,
+    week: 2,
     description: "Overview of programming paradigms, structured programming principles (sequence, selection, iteration), computational thinking; introduction to C programming language and development environment",
     icon: "Rocket",
     slides: [
@@ -142,7 +142,7 @@ int main() {
     id: 2,
     slug: "variables",
     title: "Variables",
-    week: 2,
+    week: 3,
     description: "Data types and type systems, constants, variables and their scope and lifetime, operators (arithmetic, relational, logical, bitwise), expressions and evaluation order, type conversion rules, type-casting",
     icon: "Package",
     slides: [
@@ -242,7 +242,7 @@ float salary = 50000.50;  // Combined`
     id: 3,
     slug: "expression-and-operators",
     title: "Expression and Operators",
-    week: 2,
+    week: 3,
     description: "This provides a structured breakdown of how C handles calculations and logic. It moves from simple arithmetic to complex bitwise and logical operations, which are the \"verbs\" of the C language.",
     icon: "Calculator",
     slides: [
@@ -340,7 +340,7 @@ y = x++; // y=6, x=7`
     id: 4,
     slug: "data-types",
     title: "Data Types",
-    week: 2,
+    week: 3,
     description: "A structured overview of C data types, moving from fundamental concepts to specific memory sizes and ranges. It helps students understand how C manages memory for different kinds of information.",
     icon: "Type",
     slides: [
@@ -444,7 +444,7 @@ y = x++; // y=6, x=7`
     id: 5,
     slug: "conditional-statement",
     title: "Conditional Statement",
-    week: 3,
+    week: 4,
     description: "Decision-making logic in C. It moves from simple binary choices to complex, multi-layered conditions, emphasizing the importance of logical flow and syntax.",
     icon: "GitBranch",
     slides: [
@@ -573,7 +573,7 @@ else { // default case }`
     id: 6,
     slug: "for-loop",
     title: "For Loop",
-    week: 4,
+    week: 5,
     description: "Understanding not just the syntax of the for loop, but the underlying logic and execution flow that makes it the most popular looping construct in C.",
     icon: "RotateCw",
     slides: [
@@ -690,7 +690,7 @@ int main() {
     id: 7,
     slug: "array",
     title: "Array",
-    week: 6,
+    week: 7,
     description: "Focusing on clarity, memory management, and practical syntax. It follows a logical flow from \"what is it?\" to \"how do we use it?\"",
     icon: "BarChart3",
     slides: [
@@ -802,7 +802,7 @@ for(int i = 0; i < 5; i++) {
     id: 8,
     slug: "string",
     title: "String",
-    week: 7,
+    week: 8,
     description: "Following a professional pedagogical structure, moving from the basic memory representation to the practical use of <string.h> library.",
     icon: "FileText",
     slides: [
@@ -903,7 +903,7 @@ strcat(s1, "World"); // s1 becomes "Hello World"`
     id: 9,
     slug: "pointer",
     title: "Pointer",
-    week: 9,
+    week: 10,
     description: "Designed to demystify pointers—often the most challenging topic for students—by focusing on the relationship between memory addresses and variable values.",
     icon: "MousePointer2",
     slides: [
@@ -1013,7 +1013,7 @@ printf("%d", *(marks + 1)); // Prints 20`
     id: 10,
     slug: "structure",
     title: "Structure",
-    week: 11,
+    week: 12,
     description: "Helping students transition from basic data types to user-defined data types, emphasizing how structures allow us to model real-world objects in code.",
     icon: "Building2",
     slides: [
@@ -1127,7 +1127,7 @@ struct Employee {
     id: 11,
     slug: "union",
     title: "Union",
-    week: 11,
+    week: 12,
     description: "Understanding unions - a user-defined data type where all members share the same memory location, optimizing memory usage.",
     icon: "Link2",
     slides: [
@@ -1235,7 +1235,7 @@ printf("%d", d.i); // This will print a garbage value`
     id: 12,
     slug: "function",
     title: "Function",
-    week: 10,
+    week: 11,
     description: "Explaining the \"building blocks\" of modular programming. It moves from the basic concept of code reuse to the technical details of how data is passed between functions.",
     icon: "Settings",
     slides: [
@@ -1338,7 +1338,7 @@ int add(int a, int b) {
     id: 13,
     slug: "recursion",
     title: "Recursion",
-    week: 10,
+    week: 11,
     description: "Simplifying the \"mind-bending\" nature of recursion by focusing on the mechanics of the Function Stack and the necessity of base cases.",
     icon: "Repeat",
     slides: [
@@ -1441,7 +1441,7 @@ int add(int a, int b) {
     id: 14,
     slug: "input-output",
     title: "Input/Output",
-    week: 12,
+    week: 13,
     description: "Bridging the gap between basic user interaction (Console) and permanent data storage (Files), which is a critical milestone for any C programmer.",
     icon: "FolderInput",
     slides: [
@@ -1537,7 +1537,7 @@ int add(int a, int b) {
     id: 15,
     slug: "advance-c-programming-concepts",
     title: "Advance C Programming Concepts",
-    week: 13,
+    week: 14,
     description: "Covering a wide range of topics: starting with basic syntax (constants, operators), moving through control flow (switch, do-while), and ending with advanced memory management and system interaction.",
     icon: "GraduationCap",
     slides: [
