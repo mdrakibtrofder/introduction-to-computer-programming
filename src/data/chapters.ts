@@ -397,7 +397,7 @@ float salary = 50000.50;  // Combined`
     id: 3,
     slug: "expression-and-operators",
     title: "Expression and Operators",
-    week: 3,
+    week: 4,
     description: "This provides a structured breakdown of how C handles calculations and logic. It moves from simple arithmetic to complex bitwise and logical operations, which are the \"verbs\" of the C language.",
     icon: "Calculator",
     slides: [
@@ -495,7 +495,7 @@ y = x++; // y=6, x=7`
     id: 4,
     slug: "data-types",
     title: "Data Types",
-    week: 3,
+    week: 5,
     description: "A structured overview of C data types, moving from fundamental concepts to specific memory sizes and ranges. It helps students understand how C manages memory for different kinds of information.",
     icon: "Type",
     slides: [
@@ -599,7 +599,7 @@ y = x++; // y=6, x=7`
     id: 5,
     slug: "conditional-statement",
     title: "Conditional Statement",
-    week: 4,
+    week: 6,
     description: "Decision-making logic in C. It moves from simple binary choices to complex, multi-layered conditions, emphasizing the importance of logical flow and syntax.",
     icon: "GitBranch",
     slides: [
@@ -728,7 +728,7 @@ else { // default case }`
     id: 6,
     slug: "for-loop",
     title: "For Loop",
-    week: 5,
+    week: 7,
     description: "Understanding not just the syntax of the for loop, but the underlying logic and execution flow that makes it the most popular looping construct in C.",
     icon: "RotateCw",
     slides: [
@@ -845,7 +845,7 @@ int main() {
     id: 7,
     slug: "array",
     title: "Array",
-    week: 7,
+    week: 8,
     description: "Focusing on clarity, memory management, and practical syntax. It follows a logical flow from \"what is it?\" to \"how do we use it?\"",
     icon: "BarChart3",
     slides: [
@@ -957,7 +957,7 @@ for(int i = 0; i < 5; i++) {
     id: 8,
     slug: "string",
     title: "String",
-    week: 8,
+    week: 9,
     description: "Following a professional pedagogical structure, moving from the basic memory representation to the practical use of <string.h> library.",
     icon: "FileText",
     slides: [
@@ -1168,7 +1168,7 @@ printf("%d", *(marks + 1)); // Prints 20`
     id: 10,
     slug: "structure",
     title: "Structure",
-    week: 12,
+    week: 11,
     description: "Helping students transition from basic data types to user-defined data types, emphasizing how structures allow us to model real-world objects in code.",
     icon: "Building2",
     slides: [
@@ -1390,7 +1390,7 @@ printf("%d", d.i); // This will print a garbage value`
     id: 12,
     slug: "function",
     title: "Function",
-    week: 11,
+    week: 13,
     description: "Explaining the \"building blocks\" of modular programming. It moves from the basic concept of code reuse to the technical details of how data is passed between functions.",
     icon: "Settings",
     slides: [
@@ -1493,7 +1493,7 @@ int add(int a, int b) {
     id: 13,
     slug: "recursion",
     title: "Recursion",
-    week: 11,
+    week: 14,
     description: "Simplifying the \"mind-bending\" nature of recursion by focusing on the mechanics of the Function Stack and the necessity of base cases.",
     icon: "Repeat",
     slides: [
@@ -1596,7 +1596,7 @@ int add(int a, int b) {
     id: 14,
     slug: "input-output",
     title: "Input/Output",
-    week: 13,
+    week: 15,
     description: "Bridging the gap between basic user interaction (Console) and permanent data storage (Files), which is a critical milestone for any C programmer.",
     icon: "FolderInput",
     slides: [
@@ -1692,7 +1692,7 @@ int add(int a, int b) {
     id: 15,
     slug: "advance-c-programming-concepts",
     title: "Advance C Programming Concepts",
-    week: 14,
+    week: 16,
     description: "Covering a wide range of topics: starting with basic syntax (constants, operators), moving through control flow (switch, do-while), and ending with advanced memory management and system interaction.",
     icon: "GraduationCap",
     slides: [
