@@ -10,7 +10,7 @@ import {
 export const chapterIconMap: Record<string, LucideIcon> = {
   Rocket, Package, Calculator, Type, GitBranch, RotateCw, BarChart3,
   FileText, MousePointer2, Building2, Link2, Settings, Repeat,
-  FolderInput, GraduationCap,
+  FolderInput, GraduationCap, Workflow,
 };
 
 // Pool of icons used for individual slides within a chapter (cycled by index)
