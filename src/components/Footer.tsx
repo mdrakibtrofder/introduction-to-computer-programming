@@ -44,7 +44,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              <Mail className="w-4 h-4" />
+              <Github className="w-4 h-4" />
               mdrakibtrofder.github.io
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border text-xs text-muted-foreground text-center">
-          © {new Date().getFullYear()} Introduction to Computer Programming. Crafted for learners.
+          © {new Date().getFullYear()} Introduction to Computer Programming.
         </div>
       </div>
     </footer>
