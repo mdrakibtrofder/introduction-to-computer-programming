@@ -111,6 +111,142 @@ int main() {
       output: `Area = 50`
     }
   ],
+  "algorithm-development-and-representation": [
+    {
+      question: "Write a C program that implements the pseudocode: INPUT a, b → OUTPUT their sum.",
+      answer: `#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("Sum = %d", a + b);
+    return 0;
+}`,
+      filename: "sum_of_two_numbers.c",
+      output: `Sum = 12`
+    },
+    {
+      question: "Write a C program (from a flowchart) that reads a number and prints whether it is Even or Odd.",
+      answer: `#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    if (n % 2 == 0)
+        printf("Even");
+    else
+        printf("Odd");
+    return 0;
+}`,
+      filename: "check_even_or_odd.c",
+      output: `Even`
+    },
+    {
+      question: "Write a C program that finds the largest of three numbers (translate the IF-ELSE pseudocode).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    printf("Largest = %d", max);
+    return 0;
+}`,
+      filename: "largest_of_three_numbers.c",
+      output: `Largest = 25`
+    },
+    {
+      question: "Write a C program that calculates the sum of numbers from 1 to N using a loop (FOR pseudocode).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+    printf("Sum = %d", sum);
+    return 0;
+}`,
+      filename: "sum_from_1_to_n.c",
+      output: `Sum = 55`
+    },
+    {
+      question: "Write a C program that reads marks and prints the grade (A: ≥80, B: ≥70, C: ≥60, F: otherwise).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int marks;
+    scanf("%d", &marks);
+    if (marks >= 80) printf("Grade: A");
+    else if (marks >= 70) printf("Grade: B");
+    else if (marks >= 60) printf("Grade: C");
+    else printf("Grade: F");
+    return 0;
+}`,
+      filename: "calculate_student_grade.c",
+      output: `Grade: A`
+    },
+    {
+      question: "Write a C program that counts how many digits are in a given positive integer (loop algorithm).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int n, count = 0;
+    scanf("%d", &n);
+    while (n > 0) {
+        n /= 10;
+        count++;
+    }
+    printf("Digits = %d", count);
+    return 0;
+}`,
+      filename: "count_digits_in_number.c",
+      output: `Digits = 4`
+    },
+    {
+      question: "Write a C program that prints the multiplication table of N (flowchart with a loop).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\\n", n, i, n * i);
+    }
+    return 0;
+}`,
+      filename: "multiplication_table.c",
+      output: `5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50`
+    },
+    {
+      question: "Write a C program that checks whether a year is a leap year (translate the leap-year pseudocode).",
+      answer: `#include <stdio.h>
+
+int main() {
+    int year;
+    scanf("%d", &year);
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("%d is a Leap Year", year);
+    else
+        printf("%d is NOT a Leap Year", year);
+    return 0;
+}`,
+      filename: "check_leap_year.c",
+      output: `2024 is a Leap Year`
+    }
+  ],
   "variables": [
     {
       question: "Write a C program to declare two integer variables, assign values, and print their sum.",
