@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Code2, FileText, Mail, ExternalLink } from "lucide-react";
+import { Code2, FileText, Github, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
